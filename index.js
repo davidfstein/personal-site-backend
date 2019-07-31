@@ -19,4 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb://root:password1@ds223542.mlab.com:23542/assignment4');
 
+require('./services/post-service')(app);
+
 app.listen(process.env.PORT || 3000)
