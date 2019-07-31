@@ -1,0 +1,19 @@
+{
+  "name": "personal-site-backend",
+  "version": "1.0.0",
+  "description": "Server for personal website content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidfstein/personal-site-backend.git"
+  },
+  "author": "David F. Stein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidfstein/personal-site-backend/issues"
+  },
+  "homepage": "https://github.com/davidfstein/personal-site-backend#readme"
+}
