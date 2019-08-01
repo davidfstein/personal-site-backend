@@ -3,7 +3,7 @@ module.exports = app => {
     const postModel = require('../models/post/post-model');
 
     findAllPosts = (_, res) =>
-        postModel.findAllUsers()
+        postModel.findAllPosts()
             .then(posts => {
                 res.send(posts);
             });
