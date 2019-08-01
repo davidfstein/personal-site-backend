@@ -17,7 +17,12 @@ app.use(function(req, res, next) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://root:password1@ds223542.mlab.com:23542/assignment4');
+const mongoUser = process.env.RESUME_MONGO_USER;
+const mongoPassword = process.env.RESUME_MONGO_PASSWORD;
+const mongoHost = process.env.RESUME_MONGO_HOST;
+const mongoPort = process.env.RESUME_MONGO_PORT;
+const mongoDb = process.env.RESUME_MONGO_DB;
+mongoose.connect(`mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDb}`);
 
 require('./services/post-service')(app);
 
