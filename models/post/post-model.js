@@ -22,7 +22,7 @@ updatePost = (post, date) =>
     });
 
 deletePost = (postId) =>
-    postModel.remove({_id: new mongoose.ObjectId(postId)});
+    postModel.remove({_id: mongoose.Types.ObjectId(postId)});
 
 module.exports = {
   findAllPosts,
