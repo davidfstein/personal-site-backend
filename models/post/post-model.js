@@ -22,7 +22,7 @@ updatePost = (post, date) =>
     });
 
 deletePost = (postId) =>
-    postModel.remove({_id: postId});
+    postModel.remove({_id: ObjectId(postId)});
 
 module.exports = {
   findAllPosts,
