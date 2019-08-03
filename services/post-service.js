@@ -9,14 +9,15 @@ module.exports = app => {
             });
 
     createPost = (req, res) => 
-        postModel.createPost(req.body);
+        postModel.createPost(req.body)
+                 .then(res.send(post));
 
     updatePost = (req, res) =>
         postModel.updatePost(req.body)
             .then(post => res.send(post));
 
     deletePost = (req, res) => {
-        const postId = req.body;
+        const postId = req.body.id;
         postModel.deletePost(postId)
         res.send(200);
     }
