@@ -17,7 +17,7 @@ module.exports = app => {
             .then(post => res.send(post));
 
     deletePost = (req, res) => {
-        const postId = req.body;
+        const postId = req.params.postId;
         postModel.deletePost(postId)
         res.send(200);
     }
@@ -26,7 +26,7 @@ module.exports = app => {
         postModel.findPostById(req.params.postId)
             .then(post => res.send(post));
   
-    app.get ('/api/post', findAllPosts);
+    app.get('/api/post', findAllPosts);
     app.post('/api/post', createPost);
     app.put('/api/post/:postId', updatePost);
     app.delete('/api/post/:postId', deletePost);

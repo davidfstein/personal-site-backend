@@ -21,8 +21,9 @@ updatePost = (post, date) =>
         updated: date
     });
 
-deletePost = (postId) =>
+deletePost = (postId) => {
     postModel.remove({_id: mongoose.Types.ObjectId(String(postId))});
+}
 
 module.exports = {
   findAllPosts,
