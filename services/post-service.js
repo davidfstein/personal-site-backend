@@ -17,7 +17,7 @@ module.exports = app => {
             .then(post => res.send(post));
 
     deletePost = (req, res) => {
-        const postId = req.body.id;
+        const postId = req.body;
         postModel.deletePost(postId)
         res.send(200);
     }
