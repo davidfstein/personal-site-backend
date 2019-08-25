@@ -10,7 +10,7 @@ module.exports = app => {
 
     createPost = (req, res) => 
         postModel.createPost(req.body)
-                 .then(res.send(post));
+                 .then(post => res.send(post));
 
     updatePost = (req, res) =>
         postModel.updatePost(req.body)
